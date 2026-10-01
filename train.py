@@ -22,7 +22,7 @@ print(f"Fetched shape: {df.shape}")
 X=df[['sqft','bedrooms',"bathrooms",'age_years',"garage","location_score"]]
 y=df['price']
 X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.2,random_state=42)
-mlflow.set_tracking_uri("http://127.0.0.1:5000")
+mlflow.set_tracking_uri("http://23.22.161.173:5000")
 mlflow.set_experiment("mlops-house-prediction")
 with mlflow.start_run():
     n_estimators=150
